@@ -1,0 +1,14 @@
+// See `head` element for the corresponding Google Font call
+
+:root {
+    --primary-font: 'Noto Serif', sans-serif;
+    --secondary-font: 'Noto Sans', sans-serif;
+    --heading-weight: 400;
+    --color-primary: rgb(0, 44, 119) !important;
+}
+
+.notion-header__title,
+.notion-heading {
+    color: var(--color-primary) !important;
+    font-weight: var(--heading-weight) !important;
+}

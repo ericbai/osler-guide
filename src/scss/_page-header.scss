@@ -1,0 +1,30 @@
+#{$selector-content} {
+    .notion-header {
+        // Show page header
+        display: block !important;
+
+        .notion-header__title {
+            margin: 0 !important;
+        }
+
+        // Tweak page icon in header spacing
+        .notion-header__icon-wrapper {
+            top: 0 !important; /*for images*/
+
+            & > * {
+                line-height: 45px; /*for emojis*/
+            }
+        }
+        .notion-header__title-wrapper {
+            gap: 0.75rem;
+        }
+    }
+
+    // remove size constraints on icon wrapper to prevent icon overflow errors
+    @media (max-width: 764px) {
+        .notion-header__icon-wrapper {
+            width: auto !important;
+            height: auto !important;
+        }
+    }
+}

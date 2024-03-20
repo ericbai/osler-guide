@@ -1,0 +1,12 @@
+// Fix content width styling being broken with addition of page properties due to `:first-child`
+
+.notion-root > .notion-page__properties + .notion-column-list {
+    margin: 0 auto !important;
+    max-width: var(--content-width) !important;
+}
+.notion-page__properties + .notion-column-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+}

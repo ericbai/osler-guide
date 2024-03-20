@@ -1,0 +1,14 @@
+// Only show page properties in the content area
+.notion-page__properties {
+    display: none !important;
+}
+
+#{$selector-content} {
+    .notion-page__properties {
+        display: block !important;
+
+        .notion-divider {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,4 +1,6 @@
-import greet from 'src/js/hello';
-import 'src/style.scss';
+// file paths relative to this particular file
+import './js/mobile-nav';
+import './js/move-header-and-properties';
+import './js/show-active-nav-item';
 
-greet();
+console.log('LOADED CUSTOM SCRIPTS');

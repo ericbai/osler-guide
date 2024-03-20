@@ -1,0 +1,9 @@
+// Adjust call corner border radius
+:root {
+    --callout-border-radius: 5px !important;
+}
+
+// Add spacing between successive callouts
+.notion-callout + .notion-callout {
+    margin-top: 8px !important;
+}

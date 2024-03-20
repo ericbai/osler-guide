@@ -1,0 +1,54 @@
+.mobile-nav-control {
+    &.super-navbar__button {
+        display: none;
+    }
+
+    &__icon-menu {
+        display: block;
+    }
+    &__icon-close {
+        display: none;
+    }
+}
+
+@media (max-width: 764px) {
+    .super-navbar__button.mobile-nav-control {
+        display: flex !important;
+    }
+
+    .super-root.mobile-nav-open {
+        .mobile-nav-control {
+            &__icon-menu {
+                display: none;
+            }
+            &__icon-close {
+                display: block;
+            }
+        }
+
+        #{$selector-nav} {
+            display: block !important;
+            position: absolute !important;
+            z-index: 999 !important;
+            background-color: white !important;
+            width: 100vw !important;
+        }
+
+        #{$selector-content} {
+            display: none !important;
+        }
+    }
+}
+
+@media (max-width: 546px) {
+    #{$selector-nav} {
+        // truncate nav items that are too long instead of scrolling horizontally
+        .notion-collection-list__item .notion-property__title {
+            width: 100%;
+
+            .notion-semantic-string {
+                margin-inline-end: auto;
+            }
+        }
+    }
+}

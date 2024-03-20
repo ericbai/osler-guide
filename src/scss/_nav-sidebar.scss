@@ -1,0 +1,49 @@
+// highlight active navigation page
+// doesn't seem to reliably work when nested with the navigation selector
+a.notion-link.notion-collection-list__item-anchor.page-active {
+    background: var(--color-ui-hover-bg) !important;
+}
+
+#{$selector-nav} {
+    // Tweak navigation sidebar spacing
+    .notion-collection {
+        &:first-child {
+            margin-top: 0 !important;
+        }
+        &__header-wrapper {
+            margin-top: 0 !important;
+        }
+    }
+    .notion-collection-group__section.open {
+        margin-bottom: 0.5rem;
+
+        .notion-collection-group__section-header {
+            padding-bottom: 0;
+        }
+    }
+
+    // Hide icons in navigation sidebar
+    .notion-collection
+        .notion-collection-group__section
+        .notion-property__title__icon-wrapper {
+        display: none;
+    }
+
+    // Move navigation sidebar toggle areas to the right
+    .notion-collection
+        .notion-collection-group__section
+        .notion-collection-group__section-toggle {
+        position: absolute;
+        right: 0;
+        left: auto;
+    }
+
+    // Tweak typography
+    .notion-collection-group__section-header {
+        border-top: 0;
+        text-transform: uppercase;
+    }
+    .notion-property__title {
+        font-family: var(--secondary-font);
+    }
+}
